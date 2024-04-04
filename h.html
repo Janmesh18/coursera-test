@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Week 2</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated HTML Email Template with Butterfly</title>
+<style>
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  .animated-text {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .animated-text span {
+    animation: moveLeft 8s linear infinite;
+    display: inline-block;
+    color: #ffb400;
+  }
+  @keyframes moveLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .question {
+    margin-top: 20px;
+    color: #555555;
+  }
+  /* Butterfly styles */
+  .butterfly {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    animation: flutter 4s linear infinite alternate;
+  }
+  @keyframes flutter {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+</style>
 </head>
-
 <body>
-    <h1>Our Menu</h1>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <section class="Chips">
-                <h2>Chips</h2>
-                <p>While eating at a restaurant is an enjoyable and convenient occasional treat, most individuals and families prepare their meals at home. To make breakfast, lunch, and dinner daily, these persons must have the required foods and ingredients on hand and ready to go
-                </p>
-            </section>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <section class="Sweets">
-                <h2>Sweets</h2>
-                <p>No Indian wedding menu can be concluded without sweets. Even the decision of finalising the wedding banquet totally depends on the variety of sweet dishes their caterers are going to serve. The delectable aroma of the wedding sweets is incomparable in every sense.
-
-</p>
-            </section>
-        </div>
-        <div class="col-lg-4 col-md-12 col-sm-12">
-            <section class="Bhujiya">
-                <h2>Bhujiya</h2>
-                <p>While eating at a restaurant is an enjoyable and convenient occasional treat, most individuals and families prepare their meals at home. To make breakfast, lunch, and dinner daily, these persons must have the required foods and ingredients on hand and ready to go
-                </p>
-            </section>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h2 style="color: #ff6f61;">Piya, Arpi:)</h2>
     </div>
+    <div class="content">
+      <p class="animated-text"><span>Remember, you told me tula roads cha khup craze aahe aani tu roads chi pics share karnar hotis? </span></p>
+      <p class="animated-text"><span>I am still waiting for roads wale pics!! </span></p>
+      <p class="question">Hehe,</p>
+      <p class="question">Janmesh</p>
+    </div>
+    <!-- Butterfly image -->
+    <img src="https://media.istockphoto.com/id/1409783718/photo/a-flock-of-colorful-flying-butterflies-isolated-on-a-white-background.jpg?s=612x612&w=0&k=20&c=ISDQj0dA1SvYP4EVkkw85pMFK-ZggFRucnI2k7RTYTc=" alt="Butterfly" class="butterfly">
+  </div>
 </body>
-
 </html>
